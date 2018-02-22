@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/foodDetails.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="foodDetails container">
+        <h4 class="foodName">菜名</h4>
+        <p class="foodTitle">食物描述</p>
+        <div class="foodRecommedBox container">
+            <img src="../images/food1.jpg" class="col-md-6 col-sm-6 col-xs-12" alt="食物图片">
+            <div class="foodRecommed col-md-6 col-sm-6 col-xs-12">
+                <h4>菜名</h4>
+                <p class="foodRecommedTitle">食物描述</p>
+                <div>
+                    <h4>食材：</h4>
+                    <ul class="col-md-12 col-sm-12 col-xs-12">
+                        <!--<li><span class="Material">啥啥啥</span><span class="MaterialNum">200克</span></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="cookStep container">
+            <ul >
+                <!--<li>-->
+                    <!--<div>-->
+                        <!--<img src="../images/food1.jpg" alt="步骤图">-->
+                        <!--<p>做菜教程</p>-->
+                    <!--</div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+    <script src="../javascripts/jquery-1.9.1.min.js"></script>
+    <script src="../javascripts/cookie.js"></script>
+    <script src="../javascripts/index.js"></script>
+    <script>
+        $(function(){
+            var foodName = GetQueryString("data");
+            var data = {
+                foodName: foodName
+            };
+            var url = myhost + "/api/foodDetails";
+            ajaxSend(url,"POST",data,"foodDetails");
+        });
+    </script>
+</body>
+</html>

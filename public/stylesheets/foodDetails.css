@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F5F6F8;
+    padding: 20px;
+}
+
+li{
+    list-style:none;
+}
+
+.foodRecommedBox{
+    background: #fff;
+    overflow: hidden;
+    padding: 15px;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+
+.foodRecommedBox img{
+    float: left;
+    border:1px solid #999999;
+    padding: 5px;
+}
+
+.foodRecommedBox .foodRecommed{
+    float: left;
+}
+
+.foodRecommedBox .foodRecommed div{
+    margin-top: 20px;
+}
+
+.foodRecommedBox .foodRecommed div ul{
+
+}
+
+.foodRecommedBox .foodRecommed div ul li{
+    padding: 10px;
+    /*border: 1px solid #999;*/
+    float: left;
+}
+
+.foodRecommedBox .foodRecommed div ul li .Material{
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+}
+
+.foodRecommedBox .foodRecommed div ul li .MaterialNum{
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+}
+
+.cookStep{
+    margin-top: 30px;
+    background: #fff;
+    overflow: hidden;
+    padding: 30px;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+
+.cookStep ul li{
+    margin-bottom: 30px;
+}
+
+.cookStep ul li div{
+    text-align: center;
+}
+
+.cookStep ul li div img {
+    margin-bottom: 20px;
+
+}
+
+.cookStep ul li div p{
+    display: inline-block;
+
+}
+
+.Material{
+    padding-left: 10px;
+}
+
+.MaterialNum{
+    padding-right: 10px;
+}

@@ -1,0 +1,235 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/index.css">
+    <link rel="stylesheet" href="../stylesheets/trends.css">
+    <link rel="stylesheet" href="../stylesheets/person.css">
+    <title>菜</title>
+</head>
+<body>
+<div>
+    <div class="navbar navbar-default navbar-fixed-top navStyle navbar-static-top bs-docs-nav">
+        <div class="navbar-header col-md-2">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false" style="margin-top: 15px;">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../" class="navbar-brand navLogo col-md-2 col-sm-2"><img style="height: 68px;" src="../images/logo.png"></a>
+        </div>
+        <div class="col-md-4 col-sm-2 hidden-xs" style="height: 3px;"></div>
+        <div id="bs-navbar" class="navbar-collapse collapse in" aria-expanded="true">
+            <div class="nav navbar-nav col-md-6 col-sm-7" style="margin-top: 0;margin-bottom: 0;text-align: center;">
+                <ul class="nav navbar-nav floatRightClear" style="">
+                    <li>
+                        <a href="../index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="./classify.html">菜</a>
+                    </li>
+                    <li>
+                        <a href="./trends.html">动态</a>
+                    </li>
+                    <li>
+                        <a href="./chatroom.html">聊天室</a>
+                    </li>
+                    <li>
+                        <a href="./person.html">个人中心</a>
+                    </li>
+                    <li>
+                        <div class="navLoginBox">
+                            <button type="button" class="btn btn-primary btnLogin">登录</button>
+                            <div class="logined">
+                                <img src="../images/logo1.png" class="avatar">
+                                <span class="navUsername">昵称昵称昵称</span>
+                                <div class="loginedTab">
+                                    <a class="logout">退出登录</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="loginBg col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <span class="loginClose col-md-1 col-sm-1 col-xs-1">X</span>
+                <!-- 登录 -->
+                <div class="loginPubBox loginBox col-md-6 col-sm-6 col-xs-7 col-xs-offset-1">
+                    <div style="width:100%;height:100px;">
+                        <img src="../images/logo.png" style="width:100px;height:auto;margin-top:16px;">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control loginUsername"  placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control loginPassword" placeholder="密码">
+                    </div>
+                    <div style="margin-bottom:15px;text-align:right;padding-right:30px;">
+                        <a class="goChange goRegister">没有账号？点击注册</a>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary loginBtn" style="background:#f47d43;border:none;">登录</button>
+                    </div>
+                </div>
+                <!-- 注册 -->
+                <div class="loginPubBox RegisterBox col-md-6 col-sm-6 col-xs-7 col-xs-offset-1" style="display:none;">
+                    <div style="width:100%;height:100px;">
+                        <img src="../images/logo.png" style="width:100px;height:auto;margin-top:16px;">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control regUsername" placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control regPassword" placeholder="密码">
+                    </div>
+                    <div style="margin-bottom:15px;text-align:right;padding-right:30px;">
+                        <a class="goChange goLogin">已有账号？点击登录</a>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary rigesterBtn" style="background:#f47d43;border:none;">注册</button>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-5 hidden-xs"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bg">
+        <img src="../images/person_bg.jpg">
+    </div>
+    <div class="personMsg">
+        <div class="personMsgHead">
+            <img src="../images/user.png" alt="">
+            <p>XXX</p>
+        </div>
+        <div class="personMsgBody" style="position: relative">
+            <ul class="nav nav-tabs" style="display: inline-block;background: #eee;border-radius: 6px 6px 0 0;">
+                <li role="presentation"  ><a>我喜欢的</a></li>
+                <li role="presentation" class="active"><a>发布动态</a></li>
+                <li role="presentation"><a>我的动态</a></li>
+            </ul>
+            <div class="tabsBox">
+                <span class="alertTitle1 alertTitle"></span>
+                <ul class="myLikeList container-fluid"></ul>
+                <div class="trendsDetailsMask">
+                    <div class="trendsDetails">
+                        <div class="trendsDetailsPrev"></div>
+                        <div class="trendsDetailsComment">
+                            <div class="trendsDetailsCommentHeader">
+                                <div class="trendsDetailsCommentHeaderTitle">
+                                    评论(<span>0</span>)
+                                </div>
+                            </div>
+                            <div class="trendsDetailsCommentBody">
+                                <img src="../images/def_head.png" alt="">
+                                <textarea placeholder="  想说点什么..."></textarea>
+                                <button>发送</button>
+                            </div>
+                            <div class="trendsDetailsCommentList">
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabsBox tabsBoxShow">
+                <!-- 文件上传 -->
+                <div class="sendTrends">
+                    <form id="sendTrendsForm" enctype="multipart/form-data">
+                        <div class="uploadBox">
+                            <h5>图片上传</h5>
+                            <span style="display:block; margin-bottom:10px;" class="cueMsg">最多上传三张~</span>
+                            <div class="uploadimgList">
+                                <div class="previewList">
+                                </div>
+                                <a class="uploadStyle">
+                                    <span class="uploadPlus">+</span>
+                                    <input type="file" name="upload" id="fileupload" multiple="multiple"/>
+                                </a>
+                            </div>
+                        </div>
+                        <label>发布标题</label>
+                        <input type="text" class="title" placeholder="  请输入标题">
+                        <label>发布内容</label>
+                        <textarea type="textarea" rows="3" cols="20" class="uploadTextArea" placeholder="  请输入内容"></textarea><br/>
+                        <button class="btn btn-primary uploadBtn"> 发布 </button><br/>
+                    </form>
+                </div>
+            </div>
+            <div class="tabsBox">
+                <span class="alertTitle2 alertTitle"></span>
+                <ul class="myTrendsList container-fluid"></ul>
+                <div class="trendsDetailsMask">
+                    <div class="trendsDetails">
+                        <div class="trendsDetailsPrev"></div>
+                        <div class="trendsDetailsComment">
+                            <div class="trendsDetailsCommentHeader">
+                                <div class="trendsDetailsCommentHeaderTitle">
+                                    评论(<span>0</span>)
+                                </div>
+                            </div>
+                            <div class="trendsDetailsCommentBody">
+                                <img src="../images/def_head.png" alt="">
+                                <textarea placeholder="  想说点什么..."></textarea>
+                                <button>发送</button>
+                            </div>
+                            <div class="trendsDetailsCommentList">
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../javascripts/jquery-1.9.1.min.js"></script>
+<script src="../javascripts/bootstrap.min.js"></script>
+<script src="../javascripts/cookie.js"></script>
+<script src="../javascripts/index.js"></script>
+<script>
+    $(function(){
+        if(username == ""){
+            $(".alertTitle1").html("暂无数据，请先登录");
+            $(".alertTitle2").html("暂无数据，请先登录");
+        }else{
+            $(".personMsgHead img").attr("src",avatar_url);
+            $(".personMsgHead p").html(username);
+            var myTrendsUrl = myhost + "/api/mytrends";
+            var myLikeUrl = myhost + "/api/mylike";
+            var myData = {username: username};
+            ajaxSend(myTrendsUrl,"POST",myData,"myTrends");
+            ajaxSend(myLikeUrl,"POST",myData,"myLike");
+        }
+        var $navLi = $(".nav-tabs li");
+        var $tabsBox = $(".tabsBox");
+        $navLi.click(function(){
+            var _this = $(this);
+            $navLi.removeClass("active");
+            _this.addClass("active");
+            $tabsBox.removeClass("tabsBoxShow");
+            $tabsBox.eq(_this.index()).addClass("tabsBoxShow");
+        })
+        // 评论发表
+        $(".trendsDetailsCommentBody button").click(function(){
+            var text = $(this).prev().val();
+            var thisSearchid = $(this).parent().parent().prev().attr("data-search");
+            if(username == ""){
+                alert("请先登录");
+            }else if(text == ""){
+                alert("内容不能为空");
+            }else{
+                sendComment(thisSearchid,text);
+            }
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul li{
+            float: left;
+            list-style: none;
+        }
+        .click-list ul{
+            width: 100%;
+            height:auto;
+            overflow: hidden;
+        }
+        .click-list ul li {
+            width: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .show-list{
+            overflow: hidden;
+        }
+        .show-list ul{
+            width: 100px;
+            overflow: hidden;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="click-list">
+        <ul>
+            <li @click="changeItems1()">1</li>
+            <li @click="changeItems2()">2</li>
+        </ul>
+    </div>
+    <div class="show-list" :style='{height: changHeight + "px"}'>
+        <ul class="itemsBox">
+            <li v-for="item in items">{{item.title}}</li>
+        </ul>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
+<script src="../javascripts/jquery-1.9.1.min.js"></script>
+<script src="../javascripts/cookie.js"></script>
+<script src="../javascripts/index.js"></script>
+<script>
+var vm = new Vue({
+    el: '#box',
+    data() {
+        return {
+            changHeight:"40",
+            items: [{title:"啊啊啊"},{title:"啊啊啊"},{title:"啊啊啊"},{title:"啊啊啊"},{title:"啊啊啊"},{title:"啊啊啊"},{title:"啊啊啊"},{title:"啊啊啊"},{title:"啊啊啊"},{title:"啊啊啊"},{title:"啊啊啊"},{title:"啊啊啊"},{title:"啊啊啊"}]
+        }
+    },
+    methods:{
+        changeItems1(){
+            var _this = this;
+            this.items = [{title:"11111"},{title:"11111"}];
+            this.$nextTick(function(){
+                _this.changeHeight(document.querySelector(".itemsBox").offsetHeight);
+            })
+        },
+        changeItems2(){
+            var _this = this;
+            this.items = [{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"},{title:"222222"}];
+            this.$nextTick(function(){
+                _this.changeHeight(document.querySelector(".itemsBox").offsetHeight);
+            })
+        },
+        changeHeight(val){
+            this.changHeight = val;
+        }
+    },
+})
+</script>
+</body>
+</html>

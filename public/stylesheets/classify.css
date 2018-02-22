@@ -1,0 +1,151 @@
+body{
+    background: #F5F6F8;
+}
+
+.foodBanner{
+    margin-top: 70px;
+}
+
+.foodClassify{
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.foodClassifyList{
+    overflow: hidden;
+}
+
+.foodClassifyList ul{
+    /*overflow: hidden;*/
+    padding-left: 30px;
+    margin-bottom: 25px;
+}
+
+.foodClassifyList ul li{
+    float: left;
+    margin-right: 30px;
+    color: #707070;
+    cursor: pointer;
+}
+
+.foodClassifyList ul li div{
+    width: 500px;
+    height: 0;
+    min-height: 0px;
+    transition: all 1s;
+}
+
+.foodClassifyList ul li div span{
+    display: block;
+    width: 0;
+    height: 0;
+    border-width:0px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0,0,0,0);
+    margin-left:14px;
+    transition: all 1s;
+}
+
+.foodClassifyList ul li div ol{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0);
+    padding:5px 10px;
+    overflow: hidden;
+    margin-left: -233px;
+    transition: all 1s;
+}
+
+.foodClassifyList ul li div ol li{
+    margin:10px;
+}
+
+.foodClassifyShow ul li{
+    /*overflow: hidden;*/
+    margin-bottom: 20px;
+}
+
+.foodClassifyShow ul li .foodClassifyShowBox{
+    background: #fff;
+    text-align: center;
+    padding:10px 15px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+
+
+.foodClassifyShow ul li .foodClassifyShowBox div{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.foodClassifyShow ul li .foodClassifyShowBox div:hover img{
+    -webkit-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+    -ms-transform: scale(1.2,1.2);
+    -o-transform: scale(1.2,1.2);
+    transform: scale(1.2,1.2);
+}
+
+
+
+.foodClassifyShow ul li .foodClassifyShowBox div img {
+    max-height: 150px;
+    min-height: 150px;
+    max-width: 100%;
+    transition: all 1s;
+}
+
+.foodClassifyShow ul li .foodClassifyShowBox h5{
+    color: #f47d43;
+    margin:15px 0;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.foodClassifyShow ul li .foodClassifyShowBox p {
+    color: #707070;
+    font-size:13px;
+    height:37px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.pagination{
+    width: 100%;
+    text-align: center;
+}
+
+.pagination ul{
+    overflow: hidden;
+    margin:0 auto;
+    display: inline-block;
+}
+
+.pagination ul li{
+     float: left;
+     border:1px solid #707070;
+     padding:5px 10px;
+     cursor: pointer;
+     margin:0 5px;
+ }
+
+.paginationNumColor{
+     background: #f47d43;
+ }
+
+.foodBanner{
+     width: 100%;
+     height:auto;
+     overflow: hidden;
+ }
+
+.foodBanner img{
+     width: 100%;
+     height: 400px;
+ }
+
+

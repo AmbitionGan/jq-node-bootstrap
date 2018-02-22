@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .color{
+            color: red;
+        }
+        div ul{
+            font-size: 20px;
+        }
+        div ul li{
+            float: left;
+            margin: 10px;
+            list-style: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <ul>
+            <li class="prev" data-index="prev"> < </li>
+            <li class="next" data-index="next"> > </li>
+        </ul>
+    </div>
+    <script src="../public/javascripts/jquery-1.9.1.min.js"></script>
+    <script>
+
+        function aa(arr1,a,alen,remove){
+            if(arr1[a]){
+                if(remove != ""){
+                    $(".pageNum").remove();
+                }
+                var arr2 = [];
+                var tmp = [];
+                for(var b=a; b<alen; b++){
+                    if(arr1[b]){
+                        arr2.push(arr1[b]);
+                    }else{
+                        tmp.push(b);
+                    }
+                }
+                if(tmp.length>=5){
+                    return false;
+                }
+                for(var i=a; i> a-tmp.length; i-- ){
+                    arr2.unshift(arr1[i-1]);
+                }
+                for(var b=0; b<arr2.length; b++){
+                    var pageNum = "pageNum" + arr2[b];
+                    var pageNumModel = "<li class='pageNum "+ pageNum +"' data-index='"+ arr2[b] +"'>"+ arr2[b] +"</li>";
+                    $(".next").before(pageNumModel);
+                }
+            }
+        }
+        $(function(){
+            var arr1 = [1,2,3,4,5,6,7,8,9];
+            var a = 0;
+            var alen = 5;
+            aa(arr1,a,alen,"");
+            $(".pageNum1").addClass("color");
+            $(".div ul").on("click","li",function(){
+                $(".div ul li").removeClass("color");
+                $(this).addClass("color");
+                var nextIndex = $(".color").next().attr("data-index");
+                var prevIndex = $(".color").prev().attr("data-index");
+                var colorIndex = $(".color").attr("data-index");
+                if(nextIndex == "next"){
+                    var tmpb = 0;
+                    tmpb = a + 3;
+                    if(arr1[tmpb]){
+                        a = a + 3;
+                        alen = alen + 3;
+                    }
+                    var changeIndex = ".pageNum" + colorIndex;
+                    aa(arr1,a,alen,"1");
+                    $(changeIndex).addClass("color");
+                }else if(prevIndex == "prev"){
+                    var tmpb = 0;
+                    tmpb = a - 3;
+                    if(arr1[tmpb]){
+                        a = a - 3;
+                        if(a < 0) a = 0;
+                        alen = alen - 3;
+                    }
+                    var changeIndex = ".pageNum" + colorIndex;
+                    aa(arr1,a,alen,"1");
+                    $(changeIndex).addClass("color");
+                }
+            })
+        })
+    </script>
+</body>
+</html>

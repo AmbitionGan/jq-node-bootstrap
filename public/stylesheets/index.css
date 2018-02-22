@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ol,ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+a:hover {
+    text-decoration: none;
+    color:#f47d43;
+}
+
+a:focus{
+    text-decoration: none;
+}
+
+div.navStyle {
+    background: #fff;
+    border: none;
+    box-shadow: 0px 2px 0px #eee;
+}
+
+.navbar .navbar-brand{
+    padding:0;
+    padding-left: 30px;
+    height:auto;
+}
+
+.navList ul {
+    float: right;
+    height: 68px;
+}
+.navList ul li {
+    float: left;
+    line-height: 68px;
+    text-align: center;
+    padding:0 30px;
+}
+.navLoginBox{
+    display: inline-block;
+    width: 134px;
+    margin-left: 10px;
+}
+button.btnLogin {
+    width: 80px;
+    margin-top: 8px;
+    background:#f47d43;
+    border: none;
+}
+.loginBg {
+    height: 400px;
+    position: fixed;
+    top: 50%;
+    margin-top: -200px;
+    border: 3px solid #eee;
+    background-image: url(../images/loginBg.jpg);
+    background-size: cover;
+    display: none;
+    z-index:9999;
+}
+.loginClose {
+    color: #eee;
+    font-weight: 700;
+    font-size: 24px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+.loginPubBox {
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    background: rgba(255,255,255,.3);
+    border-radius: 6px;
+}
+.loginPubBox div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.loginPubBox div input {
+    width: 80%;
+    display: inline-block;
+}
+.loginPubBox div button {
+    width: 80%;
+}
+.goChange {
+    font-size: 11px;
+    color: #555;
+    cursor: pointer;
+}
+.logined{
+    float: left;
+    cursor: pointer;
+    position: relative;
+    display: none;
+    text-align: left;
+    position: relative;
+}
+.logined:hover .loginedTab{
+    display: block;
+    background: rgba(0,0,0,0.7);
+}
+.navUsername{
+    color: #666;
+    width: 80px;
+    height: 16px;
+    overflow: hidden;
+    display: inline-block;
+}
+.avatar{
+    width: 45px;
+    margin-right:5px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+}
+.loginedTab{
+    background: rgba(0,0,0,0);
+    width: 133px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    text-align: center;
+}
+.loginedTab .logout{
+    line-height: 44px;
+    color: #fff;
+}
+
+/*  --------- 文件上传 ---------  */
+#fileupload{
+    opacity: 0;
+    position: absolute;
+    top:0;
+    height:70px;
+    width:100px;
+    cursor: pointer;
+    z-index:2;
+}
+.uploadStyle{
+    position: relative;
+    display: block;
+    text-align: center;
+    width:100px;
+    height:70px;
+    border:2px dashed #eee;
+    cursor: pointer;
+    float: left;
+    margin-bottom:10px;
+}
+.uploadPlus{
+    line-height: 70px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #eee;
+}
+.uploadimgList{
+    overflow: hidden;
+}
+/*.previewList{*/
+    /*float: left;*/
+/*}*/
+.previewbox{
+    width:100px;
+    height:70px;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+.previewbox:hover div{
+    display: block;
+}
+.previewbox div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    display: none;
+}
+.previewbox div span{
+    color: #fff;
+    position: absolute;
+    right:5px;
+    top:2px;
+}
+.previewbox img{
+    width:100px;
+    height:70px;
+}
+.uploadStyle:hover{
+    border-color: #f47d43;
+}
+.uploadStyle:hover span{
+    color: #f47d43;
+}
+.sendTrends{
+    margin: 69px auto 0;
+    width: 800px;
+    height: auto;
+    padding-top:10px;
+    overflow: hidden
+}
+.sendTrends label{
+    font-size:16px;
+    margin-top:20px;
+}
+.title{
+    width: 100%;
+    height: 36px;
+}
+.uploadTextArea{
+    width: 100%;
+    height: 200px;
+    resize: none;
+    margin-bottom: 20px;
+}
+.uploadBtn{
+    width: 80px;
+    height: 32px;
+    background: #f47d43;
+    border: none;
+    color: #fff;
+    float: right;
+}
+.uploadBox{
+    width:100%;
+    height:auto;
+}
+.uploadBox h5{
+    font-size:16px;
+    font-weight:700;
+}
+
+/*  --------- 聊天室 ---------  */
+.chatroom{
+    width: 900px;
+    height:500px;
+    margin:130px auto 0;
+    border-radius: 6px;
+}
+
+.onlineCount{
+    width: 25%;
+    height: 498px;
+    border-radius:6px;
+    background: #fff;
+    float: left;
+}
+
+.onlineCount h4{
+    text-align: center;
+    color: #2e6da4;
+    padding:20px 0;
+    margin:0;
+    border-bottom:1px solid #eee;
+}
+
+.massage{
+    width: 70%;
+    height: 500px;
+    float: left;
+    margin-left:5%;
+}
+
+.massage h4{
+    width:100%;
+    padding:20px 0 20px 20px;
+    margin:0;
+    color: #2e6da4;
+    border-bottom:1px solid #eee;
+    background: #fff;
+    border-radius: 6px 6px 0 0;
+}
+
+.massageList{
+    width:100%;
+    height:380px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #fff;
+}
+
+.sendArea{
+    overflow: hidden;
+    background: #fff;
+    margin-top:10px;
+    padding:5px;
+    /*border-top:1px dashed #2e6da4;*/
+    border-radius: 0 0 6px 6px;
+}
+
+.sendMsgText {
+    width: 70%;
+    height: 35px;
+    border: none;
+    background: rgba(0,0,0,0);
+    resize: none;
+    color: #666;
+    margin-top: 4px;
+    float: left;
+    margin-left: 50px;
+    font-size: 16px;
+    outline: none;
+}
+
+.sendBtn{
+    margin-top: 2px;
+    margin-left: 25px;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 13px;
+    padding: 0;
+    outline: none;
+}
+
+.userListBox{
+    border-bottom: 1px solid #eee;
+    padding: 5px;
+}
+
+.userListBox img{
+    width: 45px;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    margin: 0 10px 0 30px;
+}
+
+.massageListTitle{
+    text-align: center;
+    font-size: 9px;
+    color: #2e6da4;
+    margin-top:5px;
+}
+
+.massageChatBoxMyself{
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.massageChatBoxMyself img{
+    width: 40px;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    float: right;
+}
+
+.massageChatBoxMyself span{
+    float: right;
+    display: inline-block;
+    width: 93%;
+    text-align: right;
+    padding-right: 6px;
+}
+
+.massageChatBoxMyself p{
+    float: right;
+    max-width: 85%;
+    background: #2e6da4;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    line-height: 25px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.massageChatBoxOthers img{
+    float: left;
+}
+
+.massageChatBoxOthers span{
+    float: left;
+    text-align: left;
+    padding-left: 6px;
+}
+
+.massageChatBoxOthers p{
+    float: left;
+    background: darkgray;
+    margin-left: 5px;
+}
+
+.onlineCount ul{
+    width:100%;
+    height:440px;
+    overflow-y: auto;
+}
+
+ul.floatRightClear{
+    float: right; margin-top: 10px;
+}
+
+#bs-navbar ul.floatRightClear li a:hover{
+    color: #f47d43;
+}
+
+.indexBanner{
+    width: 100%;
+    height:auto;
+    margin-top: 68px;
+}
+
+.indexBanner img{
+    width: 100%;
+}
+
+.technology{
+    background: #292a2f;
+}
+
+.technology p{
+    margin-top: 30px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+}
+
+.technology ul li{
+    text-align: center;
+}
+
+.technology ul li img{
+    width: 200px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+}
+
+@media (max-width: 767px) {
+    ul.floatRightClear{
+        float: none;
+    }
+}

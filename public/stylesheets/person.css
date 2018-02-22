@@ -1,0 +1,75 @@
+.bg{
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+}
+
+.bg img{
+    width: 100%;
+    height:100%;
+}
+
+.personMsg{
+    width: 100%;
+    height: auto;
+    /*background: #fff;*/
+    position: absolute;
+    top: 20%;
+    z-index: 2;
+    padding: 0 30px;
+    padding-bottom: 30px;
+}
+
+.personMsg .personMsgHead{
+    text-align: center;
+}
+
+.personMsg .personMsgHead img{
+    width: 70px;
+    height:auto;
+    border-radius: 50%;
+    /*border:2px solid #eee;*/
+    margin-top: 15px;
+}
+
+.personMsg .personMsgHead p{
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+.personMsg .personMsgBody{
+    width: 100%;
+    height: 800px;
+    /*background: #fff*/
+}
+
+.personMsg .personMsgBody a{
+    cursor: pointer;
+}
+
+.personMsg .personMsgBody .tabsBox{
+    height: calc(100% - 40px);
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    display: none;
+    background: #fff;
+    overflow: auto;
+    padding-top: 15px;
+}
+
+.personMsg .personMsgBody .tabsBox .alertTitle{
+    display: inline-block;
+    width: 100%;
+    height:100%;
+    text-align: center;
+    color: #737373;
+    font-size: 30px;
+    line-height: 600px;
+}
+
+.personMsg .personMsgBody .tabsBoxShow{
+    display: block;
+}
